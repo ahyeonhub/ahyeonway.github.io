@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "미디엄 로고가 바뀌었다"
-subtitle:   "미디엄 로고가 바뀌었다"
+title:  "sample post"
+subtitle:   "sample"
 categories: essay
 tags: essay
 comments: true
