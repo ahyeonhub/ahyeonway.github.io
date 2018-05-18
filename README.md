@@ -9,7 +9,7 @@
 
 ## 사이드프로젝트
 
-- [instagram](https://instagram.com/ahyeonway) - 영롱한
+- [프로젝트](https://) - 영롱한
 
  확장서비스
 

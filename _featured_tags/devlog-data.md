@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Data
+title: Data structure
 slug: data
 category: devlog
 menu: false
-order: 2
+order: 1
 ---
