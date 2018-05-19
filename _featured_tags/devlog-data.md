@@ -2,7 +2,7 @@
 layout: tag-blog
 title: Data structure
 slug: data
-category: devlog
+category: cs
 menu: false
 order: 1
 ---
