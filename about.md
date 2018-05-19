@@ -18,6 +18,3 @@ order: 10
 ## 사이드프로젝트
 
 - [프로젝트](https://github.com/ahyeonway) - 프로젝트
-
-
-## 하고싶은 말
