@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "[01 자료형] - 변수와 숫자형"
+title:  "[Python 01자료형] - 변수와 숫자형"
 subtitle:   "변수와 숫자형"
 categories: language
 tags: python
 comments: true
 ---
 ## 변수
----
+
 ### 변수란?
  파이썬에서 사용하는 변수는 객체(Object)를 가리키는 것이라고도 말할 수 있다.
  객체란 자료형과 같은 것을 의미한다.
@@ -52,9 +52,9 @@ a변수가 가리키는 **타입** 은 내장함수 type을 이용한다.
 
 출력은 내장함수 **print** 를 사용
 
-
-## 숫자
 ---
+## 숫자
+
 
 **정수형(integer)** 이란 정수를 뜻하는 자료형을 말한다.
 
