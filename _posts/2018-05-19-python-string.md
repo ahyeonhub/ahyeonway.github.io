@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "[Python 01자료형] - 문자열 숫자형"
-subtitle:   "변수와 숫자형"
+title:  "[Python 01자료형] - 문자열 자료형"
+subtitle:   "문자열 자료형"
 categories: language
 tags: python
 comments: true

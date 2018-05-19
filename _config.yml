@@ -50,7 +50,8 @@ google_analytics:    UA-92346434-1
 disqus_shortname:    ahyeonway
 
 # This text will appear in the footer of every page. Markdown enabled.
-copyright:           '&copy; 2017. by isme2n'
+# reference: isme2n
+copyright:           '&copy; 2018. by ahyeonway'
 
 # Format of the permalinks
 permalink:           pretty
