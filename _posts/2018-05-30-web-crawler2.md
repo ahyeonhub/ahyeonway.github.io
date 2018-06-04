@@ -8,19 +8,7 @@ comments: true
 ---
 
 ### 4. 에피소드를 클래스로 구현
->   class Episode   
-       attrs:   
-           webtoon_id: 웹툰의 고유번호   
-           no:         에피소드의 고유번호   
-           url_thumbnail   
-           title   
-           created_date   
-           rating   
-       property:   
-           url (실제 에피소드 페이지의 URL을 리턴)   
-               파이썬 내장 urllib에 탑재되어있는 함수를 사용해서 생성   
- 4-1 위에서 dict 형태로 만들던 로직을 클래스 인스턴스 생성방식으로 변경   
-   episode_list리스트는 Episode인스턴스들을 자신의 요소로 가짐   
+
 
 ```python
 import os
@@ -38,6 +26,7 @@ class Episode:
         self.rating = rating
         self.created_date = created_date
 
+#실제 에피소드 페이지의 URL을 리턴
     @property
     def url(self):
         url =  ' http://comic.naver.com/webtoon/detail.nhn?'

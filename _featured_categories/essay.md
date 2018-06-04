@@ -2,7 +2,7 @@
 layout: list
 title: Essay
 slug: essay
-menu: false
+menu: true
 submenu: false
 order: 1
 description: >
