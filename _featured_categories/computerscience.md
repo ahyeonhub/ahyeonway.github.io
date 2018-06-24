@@ -2,7 +2,7 @@
 layout: list
 title: Computer science
 slug: cs
-menu: true
+menu: false
 submenu: true
 order: 4
 description: >

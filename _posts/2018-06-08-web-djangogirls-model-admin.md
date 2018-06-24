@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Django] - blog 앱 생성 및 관리자에 추가"
+title:  "[DjangoGirls] - blog 앱 생성 및 관리자에 추가"
 subtitle:   "Django 모델"
-categories: web
-tags: django
+categories: django
+tags: djangogirls
 comments: true
 ---
 

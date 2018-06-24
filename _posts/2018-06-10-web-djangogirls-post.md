@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Django] - TEMPLATES DIR설정, ORM실습"
+title:  "[DjangoGirls] - TEMPLATES DIR설정, ORM실습"
 subtitle:   "Django urls, view, template"
-categories: web
-tags: django
+categories: django
+tags: djangogirls
 comments: true
 ---
 

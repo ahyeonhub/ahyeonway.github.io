@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Django] - post list에서 동적으로 Post목록 보여주기"
+title:  "[DjangoGirls] - post list에서 동적으로 Post목록 보여주기"
 subtitle:   ""
-categories: web
-tags: django
+categories: django
+tags: djangogirls
 comments: true
 ---
 

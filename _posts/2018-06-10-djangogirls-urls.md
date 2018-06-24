@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Django] - post list 기본 구현"
+title:  "[DjangoGirls] - post list 기본 구현"
 subtitle:   "Django urls, view, template"
-categories: web
-tags: django
+categories: django
+tags: djangogirls
 comments: true
 ---
 
