@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Django] - introduction"
+title:  "[DjangoGirls] - introduction"
 subtitle:   "introduction"
-categories: web
-tags: django
+categories: django
+tags: djangogirls
 comments: true
 ---
 
