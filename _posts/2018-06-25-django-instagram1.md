@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "인스타그램만들기01 - pipenv로 의존성 관리, 프로젝트 기본 설정"
+title:  "인스타그램만들기 01 - pipenv로 의존성 관리, 프로젝트 기본 설정"
 subtitle:   ""
 categories: django
 tags: insta
