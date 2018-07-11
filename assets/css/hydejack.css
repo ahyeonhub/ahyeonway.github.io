@@ -77,7 +77,8 @@
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 0;
-  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  /* font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace; */
+  font: 400 14px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .markdown-body img {
@@ -106,7 +107,7 @@
 }
 
 .markdown-body pre>code {
-  color: #333;
+  color: #f8f8f2;
   padding: 0;
   margin: 0;
   font-size: 100%;
@@ -126,7 +127,7 @@
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f7f7f7;
+  background-color: #2c2c2c;
   border-radius: 3px;
 }
 
