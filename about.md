@@ -5,16 +5,8 @@ menu: true
 order: 10
 ---
 
-## 소개
-
-안녕하세요
 
 
-## 약력
+## 프로젝트
 
-- 건국대학교 화학공학과
-
-
-## 사이드프로젝트
-
-- [프로젝트](https://github.com/ahyeonway) - 프로젝트
+- [인스타그램](https://github.com/ahyeonway/instagram) - Django로 인스타그램 만들기
