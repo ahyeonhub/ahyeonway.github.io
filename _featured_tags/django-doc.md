@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Instagram
-slug: insta
+title: DjangoDoc
+slug: djangodoc
 category: django
 menu: false
-order: 4
+order: 3
 ---
