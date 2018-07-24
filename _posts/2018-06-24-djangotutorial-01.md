@@ -8,7 +8,9 @@ comments: true
 ---
 reference
 - [https://docs.djangoproject.com/ko/2.0/intro/tutorial01/]("https://docs.djangoproject.com/ko/2.0/intro/tutorial01/")
-- [https://docs.djangoproject.com/ko/2.0/intro/tutorial02/]("https://docs.djangoproject.com/ko/2.0/intro/tutorial02/")
+
+- [https://docs.djangoproject.com/ko/2.0/intro/tutorial02/]("https://docs.djangoproject.com/ko/2.0/intro/tutorial02 /")
+
 ---
 
 django로 설문조사를 할 수 있는 사이트를 만들어 봅시다.
@@ -175,17 +177,20 @@ class Choice(models.Model):
 #### API가지고 놀기
 
 `$ pip install ipython`
+
 `$ python manage.py shell`
+
 python 쉘에서 django가 접근할 수 있는 모듈 경로를 그대로 사용 할 수 있습니다.
 
 
 
 
-```python
+```
 >>> from polls.models import Choice, Question
 >>> Question.objects.all()
 <QuerySet []>   
 
+# timezone > 현재시간
 >>> from django.utils import timezone
 >>> q=Question(question_text='What's new?', pub_date=timezone.now())
 # Question인스턴스를 생성했지만 데이터베이스 안엔 없는 상태

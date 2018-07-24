@@ -1,10 +1,14 @@
 ---
 layout: post
-title:  "인스타그램만들기 02 - Post클래스 추가, MEDIA_URL연결"
+title:  "django로 인스타그램만들기 02 - Post클래스 추가, MEDIA_URL연결"
 subtitle:   ""
 categories: django
 tags: insta
 comments: true
+---
+reference
+- [https://docs.djangoproject.com/en/2.0/howto/static-files/](https://docs.djangoproject.com/en/2.0/howto/static-files/) : django docs - Mamaging static files
+
 ---
 
 ### Posts 애플리케이션 만들기
@@ -16,7 +20,7 @@ comments: true
 
 
 ```
-# posts앱의 class Post
+# posts앱의 class Post의 field
 #   author
 #   photo (ImageField)
 #   content(Text)
@@ -37,7 +41,7 @@ class Post(models.Model):
     # filefield와 imagefield는 어디로 올라갈지 정해줘야 합니다 > upload_to
     photo = models.ImageField(upload_to='post', blank=True)
     content = models.TextField(blank=True)
-    # auto_now_add처음 create될 때, auto_now는 저장될 때마다 즉 수정한 시간을 기록할 때 사용합니다
+    # auto_now_add는 처음 create될 때, auto_now는 저장될 때마다 즉 수정한 시간을 기록할 때 사용합니다
     created_at = models.DateTimeField(auto_now_add=True)
 
 ```
@@ -51,12 +55,12 @@ ImageField를 사용하기 위해서는 Pillow가 설치되어 있어야 합니�
 
 `$ pipenv install pillow` 로 설치해 줍니다.
 
-`$ pipenv graph` 로 확인할 수 있습니다.
+`$ pipenv graph` 로 설치된 것들을 확인할 수 있습니다.
 
 
 `config/settings.py`의 INSTALLED_APPS에 `'Posts.apps.PostsConfig',`를 추가해 줍니다.
 
- 그 후 makemigration, migrate를 해줍니다.
+ 그 후 makemigrations, migrate를 해줍니다.
 
 
 
@@ -75,7 +79,7 @@ from .models import Post
 admin.site.register(Post)
 ```
 
-관리자 페이지에서 post를 하나 추가해보면
+관리자 페이지(localhost:8000/admin)에서 post를 하나 추가해보면
 post라는 폴더가 생기면서 이미지 파일이 들어가는 걸 확인할 수 있습니다.
 
 우리가 IMAGE_FILED에서 upload_to에 'post'를 지정을 해주었기 때문입니다.
@@ -85,7 +89,8 @@ post라는 폴더가 생기면서 이미지 파일이 들어가는 걸 확인할
 그런데 이 폴더이름을 바꿀 수 있을까요?
 
 
-[django docs 참고](https://docs.djangoproject.com/en/2.0/howto/static-files/) - Mamaging static files
+[https://docs.djangoproject.com/en/2.0/howto/static-files/](https://docs.djangoproject.com/en/2.0/howto/static-files/) : django docs - Mamaging static files
+
 
 ### 개발 중 정적 파일 제공
 
@@ -106,8 +111,9 @@ urlpatterns = [
     # ... the rest of your URLconf goes here ...
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ```
-static()위치인자로 앞에는 urlpatterns를 반환하고, document에서 file을 찾아서 return해 주는 view를 반환합니다.
-이것을 암시적으로 해줍니다. 하지만 user가 업로드하는 파일은 명시적으로 적어줘야 합니다.
+static()위치인자로 앞에는 urlpatterns를 반환하고, document에서 file을 찾아서 return해 주는 view를 반환합니다. 이것을 암시적으로 해줍니다.
+
+하지만 user가 업로드하는 파일은 명시적으로 적어줘야 합니다.
 
 ---
 #### User가 업로드 한 파일 제공
@@ -183,16 +189,21 @@ def static(prefix, view=serve, **kwargs):
     elif not settings.DEBUG or '://' in prefix:
         # No-op if not in debug mode or a non-local prefix.
         return []
+    # static함수가 return 해주는 data type은 list입니다.
+    # lstrip은 왼쪽이 '/'로 시작할 때 그것을 없애주는 함수 입니다.
     return [
         re_path(r'^%s(?P<path>.*)$' % re.escape(prefix.lstrip('/')), view, kwargs=kwargs),
     ]
 
 ```
 
+media폴더는 git에 포함이 안되는데
+.gitignore를 보면 media폴더가 기본적으로 포함된 것을 확인 할 수 있습니다.
 
-> git commit  
->Post클래스 추가, MEDIA_URL연결
->  
->MEDIA_ROOT는 실제 파일이 업로드 되는 기준 경로  
+
+> git commit    
+>Post클래스 추가, MEDIA_URL연결       
+>MEDIA_ROOT는 실제 파일이 업로드 되는 기준 경로        
 >MEDIA_URL은 사용자가 업로드한 파일을 제공할 URL  
->config.urls에 추가한 static()은 MEDIA_URL로의 request에 대해 MEDIA_ROOT에서 찾은 파일을 response로 돌려줌  
+>config.urls에 추가한 static()은 MEDIA_URL로의 request에 대해    
+       MEDIA_ROOT에서 찾은 파일을 response로 돌려줌     
