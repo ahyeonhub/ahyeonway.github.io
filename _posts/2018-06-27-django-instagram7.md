@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "django로 인스타그램만들기 06 - login_view 구현"
+title:  "django로 인스타그램만들기 07 - login_view 구현"
 subtitle:   ""
 categories: django
 tags: insta
@@ -134,6 +134,7 @@ def login_view(request):
 ```
 
 {% endraw %}
+
 ---
 ### logout_vew구현
 
